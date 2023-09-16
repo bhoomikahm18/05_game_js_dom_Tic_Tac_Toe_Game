@@ -5,6 +5,8 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
+    background-color: blue;
 }
 
 #gameboard{
@@ -14,6 +16,16 @@ body{
     display: flex;
     flex-wrap: wrap;
     border:  solid 1px black;
+}
+
+#info{
+    color: white;
+    display: flex;
+    background-color: black;
+    width: 200px;
+    margin-left: 5px;
+    justify-content: center;
+    size: 50%;
 }
 
 .square{
