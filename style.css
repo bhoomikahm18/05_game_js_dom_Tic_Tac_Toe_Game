@@ -5,7 +5,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* flex-direction: column; */
 }
 
 #gameboard{
@@ -14,7 +13,7 @@ body{
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    border:  solid 2px black;
+    border:  solid 1px black;
 }
 
 .square{
@@ -58,8 +57,8 @@ body{
 }
 
 .cross:after{
-    top: 37%;
+    top: 50%;
     height: 30%;
-    margin-left: -0.5%;
+    margin-top: -15%;
     width: 100%;
 }
