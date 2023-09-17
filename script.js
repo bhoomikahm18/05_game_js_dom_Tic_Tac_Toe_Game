@@ -1,5 +1,6 @@
 const gameBoard = document.querySelector('#gameboard')
 const infoDisplay = document.querySelector("#info")
+const resetButton = document.querySelector("#reset")
 
 const startCells = [
     "", "", "", "", "", "", "", "", ""
@@ -28,6 +29,7 @@ function addGo(e) {
     e.target.removeEventListener("click", addGo);
 
     checkScore()
+    resetButton.addEventListener('click', resetBoard)
 }
 
 function checkScore() {
@@ -45,7 +47,7 @@ function checkScore() {
         const circleWins = array.every(cell =>
             allSquare[cell].firstChild?.classList.contains('circle'))
 
-        if(circleWins) {
+        if (circleWins) {
             infoDisplay.textContent = "Circle Wins"
             allSquare.forEach(square => square.replaceWith(square.cloneNode(true)))
             return
@@ -55,7 +57,7 @@ function checkScore() {
         const crossWins = array.every(cell =>
             allSquare[cell].firstChild?.classList.contains('cross'))
 
-        if(crossWins) {
+        if (crossWins) {
             infoDisplay.textContent = "Cross Wins"
             allSquare.forEach(square => square.replaceWith(square.cloneNode(true)))
             return
@@ -63,3 +65,5 @@ function checkScore() {
     })
 
 }
+
+
