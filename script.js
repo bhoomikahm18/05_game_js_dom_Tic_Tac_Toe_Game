@@ -25,7 +25,7 @@ function addGo(e) {
     goDisplay.classList.add(go)
     e.target.append(goDisplay)
     go = go === "circle" ? "cross" : "circle"
-    infoDisplay.textContent = "It is now " + go + "'s go."
+    infoDisplay.textContent = "It's now " + go + "'s go."
     e.target.removeEventListener("click", addGo);
 
     checkScore()
@@ -66,4 +66,10 @@ function checkScore() {
 
 }
 
+function handleReset() {
+    document.querySelector('#reset').addEventListener('click', function () {
+        location.reload();
+    });
+}
 
+handleReset();
